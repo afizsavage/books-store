@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
 const links = [
-  { id: 0, path: '/books', text: 'Books' },
-  { id: 0, path: '/categories', text: 'Categories' },
+  { id: 0, path: '/', text: 'Books' },
+  { id: 1, path: '/categories', text: 'Categories' },
 ];
 
 const Header = () => (
