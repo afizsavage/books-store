@@ -3,7 +3,7 @@ const buttons = [
     id: 0,
     title: 'Remove',
     handleClick() {
-      console.log('click');
+      return null;
     },
   },
 ];
