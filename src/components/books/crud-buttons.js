@@ -1,32 +1,53 @@
+import { useDispatch } from 'react-redux';
+
+import { removeBook } from '../../redux/books/books';
+
 const buttons = [
   {
-    id: 0,
     title: 'Remove',
-    handleClick() {
-      return null;
-    },
   },
 ];
 
 const CrudButton = (item) => {
-  const { button } = item;
+  const { btn } = item;
   return (
-    <button type="button" onClick={() => button.handleClick}>
-      {button.title}
+    <button type="button" onClick={btn.removeBookFromStore}>
+      {btn.title}
     </button>
   );
 };
 
-const CrudButtons = () => (
-  <div>
-    <ul>
-      {buttons.map((button) => (
-        <li key={button.id}>
-          <CrudButton button={button} />
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const CrudButtons = (itemId) => {
+  const { book } = itemId;
+  const dispatch = useDispatch();
+  let btn;
+
+  const removeBookFromStore = () => {
+    dispatch(removeBook(book.id));
+  };
+
+  return (
+    <div>
+      <ul>
+        {buttons.map((button) => {
+          switch (button.title) {
+            case 'Remove':
+              btn = { ...button, removeBookFromStore };
+              break;
+
+            default:
+              break;
+          }
+
+          return (
+            <li key={book.id}>
+              <CrudButton btn={btn} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
 
 export default CrudButtons;

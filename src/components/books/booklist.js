@@ -1,37 +1,23 @@
+import { useSelector } from 'react-redux';
+
 import BookCard from './card';
 
-const books = [
-  {
-    id: 0,
-    author: 'Suzanne Collins',
-    genre: 'Action',
-    title: 'The Hunger Games',
-  },
-  {
-    id: 1,
-    author: 'Julie Carwood',
-    genre: 'Action',
-    title: 'Shadow Dance',
-  },
-  {
-    id: 2,
-    author: 'Jeffery Deaver',
-    genre: 'Thriller',
-    title: 'Shallow Graves',
-  },
-];
+const BookList = () => {
+  const books = useSelector((state) => state.booksReducer);
 
-const BookList = () => (
-  <div>
-    <ul>
-      {books.map((book) => (
-        <li key={book.id}>
-          {' '}
-          <BookCard book={book} />
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+  return (
+    <div>
+      <ul>
+        {books.length > 0
+          ? books.map((book) => (
+            <li key={book.id}>
+              <BookCard book={book} />
+            </li>
+          ))
+          : null}
+      </ul>
+    </div>
+  );
+};
 
 export default BookList;
