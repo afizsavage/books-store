@@ -8,7 +8,7 @@ const BookDetails = (item) => {
         <p>{book.genre}</p>
         <p>{book.title}</p>
         <p>{book.author}</p>
-        <CrudButtons />
+        <CrudButtons book={book} />
       </div>
     </div>
   );

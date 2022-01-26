@@ -17,6 +17,7 @@ const AddingForm = () => {
   const submitBookToStore = () => {
     dispatch(addBook({ ...newBook, id: nextId() }));
   };
+
   return (
     <div>
       <h2>ADD NEW BOOK</h2>
