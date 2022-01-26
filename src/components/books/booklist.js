@@ -4,19 +4,19 @@ const books = [
   {
     id: 0,
     author: 'Suzanne Collins',
-    genre: 'Action',
+    category: 'Action',
     title: 'The Hunger Games',
   },
   {
     id: 1,
     author: 'Julie Carwood',
-    genre: 'Action',
+    category: 'Action',
     title: 'Shadow Dance',
   },
   {
     id: 2,
     author: 'Jeffery Deaver',
-    genre: 'Thriller',
+    category: 'Thriller',
     title: 'Shallow Graves',
   },
 ];
