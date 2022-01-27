@@ -13,7 +13,7 @@ const AddingForm = () => {
   const [newBook, setnewBook] = useState({
     id: null,
     title: '',
-    category: null,
+    category: 'Action',
   });
 
   const submitBookToStore = () => {
