@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import nextId from 'react-id-generator';
+import { v4 as uuid } from 'uuid';
 
 import { addBook } from '../../redux/books/books';
+
+const baseAPI = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/NVqSC6UJSOssSHkbvuAm';
 
 const AddingForm = () => {
   const dispatch = useDispatch();
@@ -10,12 +13,14 @@ const AddingForm = () => {
   const [newBook, setnewBook] = useState({
     id: null,
     title: '',
-    author: '',
-    category: null,
+    category: 'Action',
   });
 
   const submitBookToStore = () => {
-    dispatch(addBook({ ...newBook, id: nextId() }));
+    const uniqueId = uuid();
+    axios.post(`${baseAPI}/books`, {
+      item_id: uniqueId, title: newBook.title, category: newBook.category,
+    }).then(dispatch(addBook({ ...newBook, id: uniqueId })));
   };
 
   return (
@@ -27,12 +32,6 @@ const AddingForm = () => {
           placeholder="Book title"
           value={newBook.title}
           onInput={(e) => setnewBook({ ...newBook, title: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Author"
-          value={newBook.author}
-          onInput={(e) => setnewBook({ ...newBook, author: e.target.value })}
         />
         <label htmlFor="categories">
           Category

@@ -1,6 +1,9 @@
 import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 import { removeBook } from '../../redux/books/books';
+
+const baseAPI = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/NVqSC6UJSOssSHkbvuAm';
 
 const buttons = [
   {
@@ -23,7 +26,7 @@ const CrudButtons = (itemId) => {
   let btn;
 
   const removeBookFromStore = () => {
-    dispatch(removeBook(book.id));
+    axios.delete(`${baseAPI}/books/${book.id}`).then(dispatch(removeBook(book.id)));
   };
 
   return (
