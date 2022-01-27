@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-// import nextId from 'react-id-generator';
 
 import './App.css';
 import Home from './components/books';
