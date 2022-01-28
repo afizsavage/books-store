@@ -39,7 +39,7 @@ const CrudButtons = (itemId) => {
 
   return (
     <div>
-      <ul>
+      <ul className="buttons">
         {buttons.map((button) => {
           switch (button.title) {
             case 'Edit':
