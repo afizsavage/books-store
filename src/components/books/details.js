@@ -3,7 +3,7 @@ import CrudButtons from './crud-buttons';
 const BookDetails = (item) => {
   const { book } = item;
   return (
-    <div>
+    <div className="details">
       <div>
         <p>{book.title}</p>
         <p>{book.category}</p>
