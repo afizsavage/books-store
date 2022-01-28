@@ -8,9 +8,9 @@ const Progress = () => {
       <div className="progress">
         <CircularProgressbar value={percentage} />
       </div>
-      <div>
+      <div className="percentage">
         <span>{`${percentage}%`}</span>
-        <span>Complete</span>
+        <span className="figure">Complete</span>
       </div>
     </div>
   );

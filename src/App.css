@@ -120,11 +120,13 @@ select {
 
 .progress-wrap {
   width: 25%;
+  display: flex;
+  align-items: center;
 }
 
 .progress {
-  width: 5rem;
-  height: auto;
+  width: 4rem;
+  height: 4em;
 }
 
 .card {
@@ -181,4 +183,18 @@ button.comment {
   border: none;
   background: #fff;
   padding-right: 1rem;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  color: #121212;
+  font-size: 2rem;
+}
+
+.figure {
+  color: #000;
+  opacity: 0.5;
+  font-size: 0.875rem;
 }
