@@ -1,6 +1,6 @@
 const CurrentChapter = () => (
-  <div>
-    <span>Current Chapter</span>
+  <div className="current">
+    <span className="chapter">Current Chapter</span>
     <span>Chapter 17</span>
     <button type="button">Update Progress</button>
   </div>
