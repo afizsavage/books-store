@@ -45,7 +45,7 @@ const AddingForm = () => {
           <option value="science Fiction">Science Fiction</option>
           <option value="economy">Economy</option>
         </select>
-        <button onClick={submitBookToStore} type="button">
+        <button className="Rectangle-2" onClick={submitBookToStore} type="button">
           Submit
         </button>
       </form>
