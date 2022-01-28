@@ -3,3 +3,60 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.panel-bg {
+  width: 100%;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-bg img {
+  height: auto;
+  width: 2.5rem;
+}
+
+.Bookstore-CMS {
+  margin-right: 2.938rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+nav {
+  display: inline-flex;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  margin: 0 1.5rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+}
+
+nav li a.active-link {
+  color: rgb(5, 5, 5);
+}

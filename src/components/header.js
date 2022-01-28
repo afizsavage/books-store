@@ -6,19 +6,22 @@ const links = [
 ];
 
 const Header = () => (
-  <header>
-    <span>Book Store</span>
-    <nav>
-      <ul>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} activeClassName="active-link" exact>
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+  <header className="panel-bg">
+    <div>
+      <span className="Bookstore-CMS">Book Store</span>
+      <nav>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink to={link.path} activeClassName="active-link" exact>
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <span><img src="/user.png" alt="user-button" /></span>
   </header>
 );
 
