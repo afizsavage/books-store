@@ -88,9 +88,19 @@ nav li a.active-link {
   color: #888;
 }
 
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form > div {
+  width: 100%;
+}
+
 input,
 select {
-  width: 50%;
+  width: 60%;
   height: 2.813rem;
   padding: 0 1rem;
   margin-right: 2.125rem;
@@ -102,12 +112,13 @@ select {
 
 select {
   width: 30%;
+  margin-left: 2rem;
 }
 
 .Rectangle-2 {
-  width: 13.5%;
+  width: 15%;
   height: 2.813rem;
-  margin: 1.188rem 0 0 2.125rem;
+  margin: 0 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border: none;
   border-radius: 3px;
@@ -115,6 +126,7 @@ select {
   font-family: 'Roboto Slab', serif;
   font-size: 0.813rem;
   font-weight: bold;
+  text-transform: uppercase;
   color: white;
 }
 
@@ -269,5 +281,6 @@ button.remove::after {
   font-size: 0.813rem;
   font-weight: 300;
   color: #fff;
+  text-transform: uppercase;
   margin-top: 1.2rem;
 }
