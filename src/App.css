@@ -119,9 +119,22 @@ select {
 }
 
 .progress-wrap {
+  position: relative;
   width: 25%;
   display: flex;
   align-items: center;
+  margin-right: 6rem;
+}
+
+.progress-wrap::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 3px;
+  height: 4.375rem;
+  width: 0.125rem;
+  right: 0;
+  background-color: #e8e8e8;
 }
 
 .progress {
@@ -141,7 +154,7 @@ select {
 }
 
 .card .details {
-  width: 45%;
+  width: 50%;
 }
 
 .action {
