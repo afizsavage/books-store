@@ -26,7 +26,7 @@ const AddingForm = () => {
   return (
     <div className="form-wrap">
       <h2>ADD NEW BOOK</h2>
-      <form>
+      <form className="flex">
         <div>
           <input
             className="Lesson-Panel"

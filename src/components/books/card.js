@@ -6,7 +6,7 @@ const BookCard = (item) => {
   const { book } = item;
 
   return (
-    <div className="card">
+    <div className="card flex">
       <BookDetails book={book} />
       <Progress />
       <CurrentChapter />

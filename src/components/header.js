@@ -6,11 +6,11 @@ const links = [
 ];
 
 const Header = () => (
-  <header className="panel-bg">
+  <header className="panel-bg flex">
     <div>
       <span className="Bookstore-CMS">Book Store</span>
       <nav>
-        <ul>
+        <ul className="flex">
           {links.map((link) => (
             <li key={link.id}>
               <NavLink to={link.path} activeClassName="active-link" exact>
