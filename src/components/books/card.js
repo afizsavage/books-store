@@ -1,11 +1,15 @@
+import CurrentChapter from './current-chapter';
 import BookDetails from './details';
+import Progress from './progress-bar';
 
 const BookCard = (item) => {
   const { book } = item;
 
   return (
-    <div>
+    <div className="card flex">
       <BookDetails book={book} />
+      <Progress />
+      <CurrentChapter />
     </div>
   );
 };

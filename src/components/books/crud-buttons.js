@@ -7,14 +7,21 @@ const baseAPI = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 
 const buttons = [
   {
+    title: 'Comments',
+  },
+  {
     title: 'Remove',
+  },
+  {
+    title: 'Edit',
   },
 ];
 
 const CrudButton = (item) => {
   const { btn } = item;
+
   return (
-    <button type="button" onClick={btn.removeBookFromStore}>
+    <button className={btn.title === 'Remove' ? 'remove' : null} type="button" onClick={btn.removeBookFromStore}>
       {btn.title}
     </button>
   );
@@ -26,19 +33,24 @@ const CrudButtons = (itemId) => {
   let btn;
 
   const removeBookFromStore = () => {
-    axios.delete(`${baseAPI}/books/${book.id}`).then(dispatch(removeBook(book.id)));
+    axios
+      .delete(`${baseAPI}/books/${book.id}`)
+      .then(dispatch(removeBook(book.id)));
   };
 
   return (
     <div>
-      <ul>
+      <ul className="buttons">
         {buttons.map((button) => {
           switch (button.title) {
-            case 'Remove':
-              btn = { ...button, removeBookFromStore };
+            case 'Edit':
+              btn = { ...button };
               break;
-
+            case 'Comments':
+              btn = { ...button };
+              break;
             default:
+              btn = { ...button, removeBookFromStore };
               break;
           }
 

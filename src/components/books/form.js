@@ -24,17 +24,17 @@ const AddingForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-wrap">
       <h2>ADD NEW BOOK</h2>
-      <form>
-        <input
-          type="text"
-          placeholder="Book title"
-          value={newBook.title}
-          onInput={(e) => setnewBook({ ...newBook, title: e.target.value })}
-        />
-        <label htmlFor="categories">
-          Category
+      <form className="flex">
+        <div>
+          <input
+            className="Lesson-Panel"
+            type="text"
+            placeholder="Book title"
+            value={newBook.title}
+            onInput={(e) => setnewBook({ ...newBook, title: e.target.value })}
+          />
           <select
             name="categories"
             id="categories"
@@ -46,10 +46,8 @@ const AddingForm = () => {
             <option value="science Fiction">Science Fiction</option>
             <option value="economy">Economy</option>
           </select>
-        </label>
-        <button onClick={submitBookToStore} type="button">
-          Submit
-        </button>
+        </div>
+        <button className="Rectangle-2" onClick={submitBookToStore} type="button">Add book</button>
       </form>
     </div>
   );
