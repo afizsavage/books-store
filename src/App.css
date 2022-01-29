@@ -188,7 +188,7 @@ button.comment {
 }
 
 .buttons button {
-  height: 1.188rem;
+  height: auto;
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
@@ -196,6 +196,34 @@ button.comment {
   border: none;
   background: #fff;
   padding-right: 1rem;
+}
+
+button.remove {
+  position: relative;
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+
+button.remove::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.125rem;
+  height: 1.5rem;
+  left: 0;
+  bottom: 0;
+  background-color: #e8e8e8;
+}
+
+button.remove::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.125rem;
+  height: 1.5rem;
+  right: 0;
+  bottom: 0;
+  background-color: #e8e8e8;
 }
 
 .percentage {

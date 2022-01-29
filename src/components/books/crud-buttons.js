@@ -19,8 +19,9 @@ const buttons = [
 
 const CrudButton = (item) => {
   const { btn } = item;
+
   return (
-    <button type="button" onClick={btn.removeBookFromStore}>
+    <button className={btn.title === 'Remove' ? 'remove' : null} type="button" onClick={btn.removeBookFromStore}>
       {btn.title}
     </button>
   );
